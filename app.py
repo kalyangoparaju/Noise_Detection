@@ -8,7 +8,7 @@ import time
 app = Flask(__name__, static_folder='static')
 
 # Load the Keras model outside the Flask route
-model = keras.models.load_model('front/vgg16_model.h5')
+model = keras.models.load_model('detection/vgg16_model.h5')
 label=["Data Loss ","No ","Salt And Pepper ","Stripe "]
 @app.route("/", methods=["GET", "POST"])
 def index():
