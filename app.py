@@ -3,7 +3,7 @@ import numpy as np
 from tensorflow import keras
 from PIL import Image
 import cv2
-import time
+
 
 app = Flask(__name__, static_folder='static')
 
