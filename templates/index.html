@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
+</head>
+
+<body>
+
+
+
+    <div class="modal" tabindex="1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Prediction is</h2>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <h4>LOADING ...</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-close btn-secondary" data-dismiss="modal"
+                        id="closeButton">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="heading" >
+        <h2>AUTOMATED QUALITY CERTIFICATION OF REMOTE SENSING SATELLITE IMAGES</h2>
+    </div>
+
+    <div class="main">
+
+        <div id="upload">
+            <form id="form" method="post" enctype="multipart/form-data">
+                <span style="color: aliceblue;">Select image to upload:</span>
+                <input class="button" type="file" name="file" id="fileToUpload" onchange="previewImage(event);">
+            </form>
+        </div>
+
+        <div id="preview" style="visibility:hidden;">
+            <img id="previewImage" src="#" alt="Preview Image">
+        </div>
+    </div>
+
+    <button onclick="sub()" type="button" class="btn" data-toggle="modal" data-target=".modal" id="detect">
+        Detect
+    </button>
+
+
+    <script>
+
+    </script>
+
+
+    <!-- The Modal -->
+
+
+</body>
+
+</html>

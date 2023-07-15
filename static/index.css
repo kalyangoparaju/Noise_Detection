@@ -1,0 +1,109 @@
+
+body {
+  background-image: url("img/galaxy-night-landscape.jpg");
+  background-size: 100%;
+  background-size:cover;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(0.5px);
+  
+}
+
+.main{
+    display: flex;
+    width: 100%;
+}
+#heading {
+  text-align: center;
+  color: azure;
+  margin-top: 20px;
+  ;
+}
+
+
+#preview{
+    background-color: rgb(0,0,0);
+}
+
+#preview img{
+    width: 250px;
+    height: 250px;
+    margin-top: 90px;
+    margin-left:50px;
+    padding : 9px;
+    border: 2px solid rgb(253, 254, 253);
+
+}
+
+#upload {
+  padding-left: 0%;
+  padding-top: 15%;
+  margin-left:20% ;
+}
+
+input[type="file"]::after {
+  background-color: rgb(235, 76, 8);
+}
+
+.button,#detect {
+  background-color: rgb(30, 29, 29);
+  color: rgb(255, 255, 255);
+  border: 2px solid #4571d6;
+  transition-duration: 0.4s;
+}
+
+.button:hover,#detect:hover {
+    background-color: #3e5097;
+    /* Green */
+    color: white;
+}
+
+#detect {
+    position: relative;
+    left: 29%;
+    width: 150px;
+    margin-top: 15px;
+    padding: 5px;
+}
+
+
+
+/*   MODAL CODE  */
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 99999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+
+}
+
+
