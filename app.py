@@ -10,7 +10,7 @@ app = Flask(__name__, static_folder='static')
 # Load the Keras model outside the Flask route
 model = keras.models.load_model('detection/vgg16_model.h5')
 label=["Data Loss ","No ","Salt And Pepper ","Stripe "]
-@app.route("/", methods=["GET", "POST"])
+@app.route("https://64b38ada2458f87f8043a318--tangerine-llama-2bfaf6.netlify.app/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
         # Access the uploaded file
