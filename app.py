@@ -3,14 +3,17 @@ import numpy as np
 from tensorflow import keras
 from PIL import Image
 import cv2
+import os
 
 
 app = Flask(__name__, static_folder='static')
 
-# Load the Keras model outside the Flask route
-model = keras.models.load_model('./vgg16_model.h5')
+h5_file_path = os.path.join(os.path.dirname(__file__), "vgg16_model.h5")
+
+# Load the model
+model = keras.models.load_model(h5_file_path)
 label=["Data Loss ","No ","Salt And Pepper ","Stripe "]
-@app.route("https://64b38ada2458f87f8043a318--tangerine-llama-2bfaf6.netlify.app/", methods=["GET", "POST"])
+@app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
         # Access the uploaded file
