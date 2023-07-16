@@ -8,10 +8,12 @@ import os
 
 app = Flask(__name__, static_folder='static')
 
-h5_file_path = os.path.join(os.path.dirname(__file__), "vgg16_model.h5")
+current_dir = os.path.dirname(os.path.abspath(__file__))
+h5_file_path = os.path.join(current_dir, "vgg16_model.h5")
 
 # Load the model
 model = keras.models.load_model(h5_file_path)
+
 label=["Data Loss ","No ","Salt And Pepper ","Stripe "]
 @app.route("/", methods=["GET", "POST"])
 def index():
